@@ -38,6 +38,9 @@
 - 06/04 : **결과물 보고서 제출**
 
 
+![schedule](https://user-images.githubusercontent.com/37465123/53877984-fd6dc600-404d-11e9-8bde-302f25cbe360.png)
+
+
 
 ### 팀원
 
