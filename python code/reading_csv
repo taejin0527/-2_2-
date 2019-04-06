@@ -1,0 +1,70 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# csv 파일 읽기
+# 속성 이름 = ['line_no', 'inout_type', 'seq', 'stop_name', 'x', 'y', 'get_date']
+#             버스 번호,    출발/도착,     순서,    정거장 이름,  lng, lat,     시간
+filenamelist = ["13395/1월.csv", "13395/2월.csv",
+                "13395/3월.csv", "13395/4월.csv",
+                "13395/5월.csv", "13395/6월.csv",
+                "13395/7월.csv", "13395/8월.csv",
+                "13395/9월.csv", "13395/10월.csv",
+                "13395/11월.csv", "13395/12월.csv"]
+
+
+data = pd.read_csv("/Users/knuprime105/Documents/GitHub/-2_2-/python code/13395_stop_raw.csv", names=['line_no', 'inout_type', 'seq', 'stop_name', 'x', 'y', 'get_date'])
+
+# data2 = pd.read_csv("/Users/knuprime105/Documents/GitHub/-2_2-/python code/13481.csv", names=['get_date', 'lat', 'lng', 'speed', 'line_no'])
+
+# print(data.head(10))
+
+start_date = ['2018.01.01 06:00:00', '2018.02.01 05:30:00', '2018.03.01 05:30:00', '2018.04.01 05:30:00', '2018.05.01 05:30:00',
+              '2018.06.01 05:30:00', '2018.07.01 05:30:00', '2018.08.01 05:30:00', '2018.09.01 05:30:00', '2018.10.01 05:30:00',
+              '2018.11.01 05:30:00', '2018.12.01 05:30:00']
+end_date = ['2018.01.31 21:00:00', '2018.02.28 21:00:00', '2018.03.31 21:00:00', '2018.04.30 21:00:00', '2018.05.31 21:00:00',
+            '2018.06.30 21:00:00', '2018.07.31 21:00:00', '2018.08.31 21:00:00', '2018.09.30 21:00:00', '2018.10.31 21:00:00',
+            '2018.11.30 21:00:00', '2018.12.31 21:00:00']
+
+plt.figure(figsize=(20,7))
+# for i,j in zip(start_date, end_date):
+#     lat = data.loc[(data['get_date'] > i) & (data['get_date'] < j), 'y']
+#     lng = data.loc[(data['get_date'] > i) & (data['get_date'] < j), 'x']
+#     x1 = np.array(lat, dtype="float")
+#     y1 = np.array(lng, dtype="float")
+#     plt.scatter(y1, x1, color='r')
+
+
+for i,j,name,n in zip(start_date, end_date, filenamelist,range(1,13)):
+    lat1 = data.loc[(data['get_date'] > i) & (data['get_date'] < j), 'y']
+    lng1 = data.loc[(data['get_date'] > i) & (data['get_date'] < j), 'x']
+    x1 = np.array(lat1, dtype="float")
+    y1 = np.array(lng1, dtype="float")
+    data2 = pd.read_csv(name, names=['get_date', 'lat', 'lng', 'speed', 'line_no', 'y'])
+    lat = data2.loc['1':, 'lat']
+    lng = data2.loc['1':, 'lng']
+    x2 = np.array(lat, dtype="float")
+    y2 = np.array(lng, dtype="float")
+    plt.subplot(3, 4, n)
+    plt.scatter(y2, x2, s=1)
+    plt.scatter(y1, x1, color='r')
+
+
+# lat = data.loc[(data['get_date']>'2018.01.02 00:00:00')&(data['get_date']<'2018.01.03 00:00:00'), 'y']
+# lng = data.loc[(data['get_date']>'2018.01.02 00:00:00')&(data['get_date']<'2018.01.03 00:00:00'), 'x']
+# x1 = np.array(lat, dtype="float")
+# y1 = np.array(lng, dtype="float")
+
+# lat = data2.loc[(data2['get_date']>'2018.01.02 00:00:00')&(data2['get_date']<'2018.01.03 00:00:00'), 'lat']
+# lng = data2.loc[(data2['get_date']>'2018.01.02 00:00:00')&(data2['get_date']<'2018.01.03 00:00:00'), 'lng']
+# x2 = np.array(lat, dtype="float")
+# y2 = np.array(lng, dtype="float")
+
+# print(x1, y1)
+
+# plt.figure(figsize=(20,7))
+# plt.scatter(y1, x1, color='r')
+# for n in range(1,12):
+#     plt.subplot(3,4,n)
+#     plt.plot(y2, x2)
+plt.show()
