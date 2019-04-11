@@ -5,26 +5,31 @@
 
 
 # 머신러닝을 활용한 버스 도착 시간 예측
-###Prediction of Bus Arrival Time using Machine Learning
+### Prediction of Bus Arrival Time using Machine Learning
 
 
 
 :books: Folders :books:
+- **DOCUMENTS**
+  - **meeting note**
+    : 회의록
+  - **paper**
+    : 논문자료
+  - **presentation**
+    : 발표자료
+  - **report**
+    : 수행계획서
+
+- **python code**
+  - **preprocessing**
+    : 머신러닝을 위해 정제한 데이터
+  - **analysis**
+    : 경로 분석
+  - **machine learning**
+    : 딥러닝 모델
 - **csv files**
   : 버스 운행 정보
 
-- **meeting note**
-  : 회의록
-
-- **presentation**
-  : 발표자료
-
-- **python code**
-  : 데이터 분석 코드
-
-- **report**
-  : 수행계획서
-  
 
 ### 일정
 
