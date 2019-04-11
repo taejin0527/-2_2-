@@ -9,7 +9,7 @@
 
 
 
-:books: Folders :books:
+:books: **Folders** :books:
 - **DOCUMENTS**
   - **meeting note**
     : 회의록
@@ -30,8 +30,9 @@
 - **csv files**
   : 버스 운행 정보
 
+---
 
-### 일정
+## 일정
 
 - ~~03/05 : 팀원 구성~~
 
@@ -53,18 +54,18 @@
 
 - 06/04 : **결과물 보고서 제출**
 
+---
 
 ![schedule](https://user-images.githubusercontent.com/37465123/55154853-34d91980-5199-11e9-8acf-2e68f76a65db.png)
 
-
-
+---
+## 구성도
 ### 팀원
 
 - 김태진(조장)
 - 김영관
 - 태형만
 - 조유진
-
 
 
 ### 협업
