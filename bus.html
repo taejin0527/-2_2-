@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+
+<!--ÁÖ¼®-->
+
+<html lang="ko">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+
+body, ul{
+margin:0;
+padding:0;
+}
+a{
+text-decoration:none;
+}
+
+li{
+list-style-type:none;
+}
+<!------------------------------------------------>
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* temp grid */
+.col-1 {
+  width: 100%;
+}
+.col-2 {
+  width: 100%;
+}
+
+.only-sr {
+  overflow: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+}
+
+/* form | radio */
+.radio-items {
+  display: table;
+  width: 100%;
+  height: 60px;
+  line-height:60px;
+  border: 1px solid #5D5D5D;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.radio-items > div {
+  display: table-cell;
+  height: 49px;
+  line-height: 49px;
+  border-left: 1px solid #454a60;
+  text-align: center;
+}
+.radio-items > div:first-child {
+  border-left: none;
+  width: auto !important;
+}
+.radio-items label {
+  display: block;
+  width: 100%;
+  height: 60px;
+  font-size:30px;
+  color: #454a60;
+  background-color: #B2EBF4;
+  border-bottom: 1px solid #5D5D5D;
+  border-top:1px solid #5D5D5D;
+  border-right:3px solid #358da1;
+  vertical-align: middle;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.radio-items input[type="radio"]:checked + label {
+  background-color: #FFB2D9;
+  color: #000000;
+  font-weight: bold;
+}
+
+.ie8 .radio-items input[type="radio"].checked + label {
+  background-color: #454a60;
+  color: #fff;
+}
+
+.radio-items input[type="radio2"]:checked + label {
+  background-color: #FFB2D9;
+  color: #000000;
+  font-weight: bold;
+}
+
+.ie7 .radio-items input[type="radio2"].checked + label {
+  background-color: #454a60;
+  color: #fff;
+}
+
+<!------------------------------------------>
+
+.horizontal-menuu{
+display:inline-block;
+overflow:hidden;
+border-bottom: 3px solid #353535;
+}
+
+.horizontal-menuu li {
+float: left;
+}
+
+.horizontal-menuu a {
+display: block;
+font-size:30px;
+height:60px;
+font-weight:bold;
+line-height:50px;
+background-color:#358da1;
+color:white;
+padding: 0 36.5px;
+padding-left: 40px;
+border-right: 3px solid #358da1;
+}
+
+
+<!------------------------------------------>
+.horizontal-menu {
+display:inline-block;
+overflow:hidden;
+border-bottom: 3px solid #318294;
+}
+
+.horizontal-menu li {
+float: left;
+}
+
+.horizontal-menu a {
+display: block;
+height: 70px;
+line-height: 50px;
+background-color: #3ea3ba;
+color: #ddd;
+padding: 0 35px;
+border-right: 1px solid #358da1;
+}
+
+.horizontal-menu li:last-child a { 
+border-right: 0;
+}
+
+.horizontal-menu a:hover { 
+background-color: #358da1;
+color: #fff;
+}
+<!---------------------vertical ?? ---------------------->
+.vertical-menu{
+width:200px;
+margin:0;
+}
+
+.vertical-menu a{
+height:60px;
+line-height:60px;
+background-color:#B2EBF4;
+display:block;
+color:#747474;
+font-size:30px;
+padding: 0 20px;
+border-bottom: 1px solid gray;
+border-top:1px solid gray;
+border-right:3px solid #358da1;
+}
+
+.vertical-menu a:hover{
+background-color:#FFB2D9;
+color:#fff;}
+
+
+<!---------------------div CSS ?? ---------------------->
+#div_root{
+margin:auto;
+width:wrap;
+}
+
+#div_top{
+width:100%;
+height:70px;
+background-color:#3DB7CC;
+border-bottom: 3px solid #318294;
+font-weight:bold;
+color:white;
+font-size:30px;
+text-align:left;
+}
+
+#div_menu{
+width:40%;
+height:60px;
+float:left;
+text-align:left}
+
+#div_men{
+width:10%;
+height:300px;
+float:left;
+text-align:center;}
+
+
+#div_option{
+width:40%;
+height:50px;
+float:left;
+background-color: #3DB7CC;
+font-size:30px;
+font-weight:bold;
+text-align:center;
+line-height: 50px;
+margin-top:25px;
+}
+
+#div_option_in{
+width:480px;
+height:30px;
+float:left;
+margin-right:-3.5px;
+font-size:20px;
+text-align:left;
+}
+
+#div_option_in2{
+width:150px;
+height:30px;
+float:left;
+margin-right:-3.5px;
+font-size:20px;
+text-align:left;
+}
+
+#div_option_in3{
+width:380px;
+height:50px;
+float:left;
+margin-right:-3.5px;
+font-size:45px;
+color: #FF00DD;
+font-weight: bold;
+text-align:center;
+}
+
+#div_con{
+width:60%;
+height:550px;
+float:right;
+background-color:#5D5D5D;
+background-size:100%100%
+text-align:right
+}
+
+#div_bottom{
+width:100%;
+height:45px;
+line-height: 40px;
+clear:both;
+opacity:0.7;
+color:white;
+font-size: 20px;
+background-color:#000000;
+text-align:center}
+
+
+table.type11 {
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+    margin: 20px 10px;
+}
+table.type11 th {
+    width: 140px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #fff;
+    background: #ce4869 ;
+}
+table.type11 td {
+    width: 140px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #eee;
+}
+
+</style>
+</head>
+<title>Prediction Bus Arrival Time</title>
+<h1 style="padding: 25px 0px;margin-bottom:0px;
+margin-top:0px;background:#000000;
+opacity:0.7;text-align:center;
+font-size:40px;width:wrap;
+height:70px;font-weight:bold;
+color:white;border-bottom:2px solid #8C8C8C;">Prediction Bus Arrival Time</h1>
+
+
+<body>
+
+<div id="div_root">
+<div id="div_top">
+	<ul class="horizontal-menu">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">소개</a></li>
+	</ul>
+</div>
+<div id="div_menu">
+		<ul class="horizontal-menuu">
+			<li><a>버스</a></li>
+			<li><a>요일</a></li>
+			<li><a>날씨</a></li>
+			<li><a>교통량</a></li>
+		</ul>
+</div>
+
+
+<!--	<div id="div_option_tle">
+		<div id="div_option"><p style="margin:10px">Bus</p></div>
+		<div id="div_option"><p style="margin:10px">Weather</p></div>
+		<div id="div_option"><p style="margin:10px">Day</p></div>
+	</div>
+	<div id="div_option_in"><p>13395</p></div>
+	<div id="div_option_in"><p>13233</p></div>
+	<div id="div_option_in"><p>14556</p></div> 
+</div>-->
+<div id="div_con">
+	<!-- 지도 띄우는 javascript 코드, 현재 내 localhost에서만 가능 
+<div id="map" style="margin:15px;width:840px;height:520px"></div>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9da08475c5dcb2e9e4f4026aaa30e848&libraries=drawing"></script>
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new daum.maps.LatLng(35.190926, 128.970748),
+			level: 7
+		};
+
+		var map = new daum.maps.Map(container, options);
+				var mapTypeControl = new daum.maps.MapTypeControl();
+
+		// 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+		// daum.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+		map.addControl(mapTypeControl, daum.maps.ControlPosition.TOPRIGHT);
+
+		// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+		var zoomControl = new daum.maps.ZoomControl();
+		map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
+
+		map.setCursor('move');
+		
+		var polyline = new daum.maps.Polyline({
+			map: map, // ?? ??? ?? ?? 
+			path: [ // ?? ???? ?? ??
+				new daum.maps.LatLng(35.21225739, 129.013443),
+				new daum.maps.LatLng(35.209584, 129.002481),
+				new daum.maps.LatLng(35.209446, 129.000612),
+				new daum.maps.LatLng(35.209165, 128.999573),
+				new daum.maps.LatLng(35.208793, 128.998984),
+				new daum.maps.LatLng(35.205924, 128.996030),
+				new daum.maps.LatLng(35.205115, 128.995000),
+				new daum.maps.LatLng(35.204484, 128.994315),
+				new daum.maps.LatLng(35.204348, 128.993974),
+				new daum.maps.LatLng(35.204478, 128.993241),
+				new daum.maps.LatLng(35.210431, 128.984326),
+				new daum.maps.LatLng(35.210877, 128.982638),
+				new daum.maps.LatLng(35.211820, 128.974026),
+				new daum.maps.LatLng(35.204351, 128.974187),
+				new daum.maps.LatLng(35.203704, 128.973775),
+				new daum.maps.LatLng(35.198678, 128.9669343),
+				new daum.maps.LatLng(35.195363, 128.963850),
+				new daum.maps.LatLng(35.181814, 128.958108),
+				new daum.maps.LatLng(35.179551, 128.957906),
+				new daum.maps.LatLng(35.173419, 128.959811),
+				new daum.maps.LatLng(35.169155, 128.959858),
+				new daum.maps.LatLng(35.164437, 128.946909),
+				new daum.maps.LatLng(35.167390, 128.945343),
+				new daum.maps.LatLng(35.167784, 128.945295),
+				new daum.maps.LatLng(35.167656, 128.944520),
+				new daum.maps.LatLng(35.162311, 128.941273),
+				new daum.maps.LatLng(35.161629, 128.937760),
+				new daum.maps.LatLng(35.162141, 128.935424),
+				new daum.maps.LatLng(35.162495, 128.934966),
+				new daum.maps.LatLng(35.164484, 128.934701),
+				new daum.maps.LatLng(35.165645, 128.935110),
+				new daum.maps.LatLng(35.166925, 128.934918),
+				new daum.maps.LatLng(35.167574, 128.935253),
+				new daum.maps.LatLng(35.168127, 128.935331)
+//				new daum.maps.LatLng(35.17596054, 128.9345551)
+			],
+
+			strokeWeight: 3, // ?? ??
+			strokeColor: '#FF00DD', // ? ?
+			strokeOpacity: 0.9, // ? ???
+			strokeStyle: 'solid' // ? ???
+		});	
+		
+
+	var imageSrc = 'http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png', // 마커이미지의 주소입니다    
+    imageSize = new daum.maps.Size(50, 55), // 마커이미지의 크기입니다
+    imageOption = {offset: new daum.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+      
+	// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+	var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize, imageOption),
+    markerPosition = new daum.maps.LatLng(35.21225739, 129.013443); // 마커가 표시될 위치입니다
+
+	// 마커를 생성합니다
+	var marker = new daum.maps.Marker({
+	    position: markerPosition, 
+	    image: markerImage // 마커이미지 설정 
+	});
+
+	var imageSrc2 = 'http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png', // 마커이미지의 주소입니다    
+    imageSize2 = new daum.maps.Size(50, 55), // 마커이미지의 크기입니다
+    imageOption2 = {offset: new daum.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+      
+	// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+	var markerImage2 = new daum.maps.MarkerImage(imageSrc2, imageSize2, imageOption2),
+    markerPosition2 = new daum.maps.LatLng(35.168127, 128.935331); // 마커가 표시될 위치입니다
+
+	// 마커를 생성합니다
+	var marker2 = new daum.maps.Marker({
+	    position: markerPosition2, 
+	    image: markerImage2 // 마커이미지 설정 
+	});
+	
+
+	marker.setMap(map);
+	marker2.setMap(map);
+	
+	</script>-->
+
+<!------------------------data handling-------------------------------------->
+<script>
+function hasClass(target, className) {
+	if( (' ' + target.className + ' ').replace(/[\n\t]/g, ' ').indexOf(' ' + className + ' ') > -1 ) return true;
+	return false;
+}
+function removeClass(target, className){
+    var elClass = ' ' + target.className + ' ';
+    while(elClass.indexOf(' ' + className + ' ') !== -1){
+         elClass = elClass.replace(' ' + className + ' ', '');
+    }
+    target.className = elClass;
+}
+function addClass(target, className){
+    target.className += ' ' + className;   
+}
+
+if( hasClass( document.getElementsByTagName('html')[0], 'ie8' ) ) { // ie8 일 경우
+    var radios = document.querySelectorAll('input[type="radio"]'),
+        i,
+        len = radios.length;
+　
+    for( i = 0; i < len; i++ ) {
+        radios[i].attachEvent('onchange', function(e) {
+            var siblingsChecked = this.parentNode.parentNode.querySelector('.checked'); // 이전 checked 버튼
+			
+            removeClass(siblingsChecked, 'checked'); // checked 삭제
+            addClass(this, 'checked'); // checked 부여
+        });
+    }
+}
+
+if( hasClass( document.getElementsByTagName('html')[0], 'ie7' ) ) { // ie7 일 경우
+    var radios = document.querySelectorAll('input[type="radio2"]'),
+        i,
+        len = radios.length;
+　
+    for( i = 0; i < len; i++ ) {
+        radios[i].attachEvent('onchange', function(e) {
+            var siblingsChecked = this.parentNode.parentNode.querySelector('.checked'); // 이전 checked 버튼
+			
+            removeClass(siblingsChecked, 'checked'); // checked 삭제
+            addClass(this, 'checked'); // checked 부여
+        });
+    }
+}
+
+</script>
+<!------------------------------------>
+	
+	</div>
+<div id="div_men">
+	<ul class="vertical-menu">
+	<div style="width: 150px; height:300px">
+	<div class="radio-items">
+		<div class="col-1">
+			<input id="a1" class="only-sr checked" type="radio" name="temp1" value="1">
+			<label for="a1">1</label>
+			<input id="a2" class="only-sr" type="radio" name="temp1" value="2">
+			<label for="a2">2</label>
+			<input id="a3" class="only-sr" type="radio" name="temp1" value="3">
+			<label for="a3">3</label>
+			<input id="a4" class="only-sr" type="radio" name="temp1" value="4">
+			<label for="a4">4</label>
+			<input id="a5" class="only-sr" type="radio" name="temp1" value="5">
+			<label for="a5">5</label>
+	</div>
+	</div>
+	</div>
+	</ul>
+</div>
+<div id="div_men">
+	<ul class="vertical-menu">
+	<div style="width: 150px; height:300px">
+	<div class="radio-items">
+		<div class="col-2">
+			<input id="b1" class="only-sr checked" type="radio" name="temp2" value="1">
+			<label for="b1">월</label>
+			<input id="b2" class="only-sr" type="radio" name="temp2" value="2">
+			<label for="b2">화</label>
+			<input id="b3" class="only-sr" type="radio" name="temp2" value="3">
+			<label for="b3">수</label>
+			<input id="b4" class="only-sr" type="radio" name="temp2" value="4">
+			<label for="b4">목</label>
+			<input id="b5" class="only-sr" type="radio" name="temp2" value="5">
+			<label for="b5">금</label>
+		</div>			
+	</div>
+	</div>
+	</ul>
+</div>
+<div id="div_men">
+	<ul class="vertical-menu">
+	<div style="width: 150px; height:300px">
+	<div class="radio-items">
+		<div class="col-2">
+			<input id="c1" class="only-sr checked" type="radio" name="temp3" value="1">
+			<label for="c1">비</label>
+			<input id="c2" class="only-sr" type="radio" name="temp3" value="2">
+			<label for="c2">눈</label>
+			<input id="c3" class="only-sr" type="radio" name="temp3" value="3">
+			<label for="c3">흐림</label>
+			<input id="c4" class="only-sr" type="radio" name="temp3" value="4">
+			<label for="c4">맑음</label>
+			<input id="c5" class="only-sr" type="radio" name="temp3" value="5">
+			<label for="c5">안개</label>
+		</div>			
+	</div>
+	</div>
+	</ul>
+</div>
+<div id="div_men">
+	<ul class="vertical-menu">
+	<div style="width: 150px; height:300px">
+	<div class="radio-items">
+		<div class="col-2">
+			<input id="d1" class="only-sr checked" type="radio" name="temp4" value="1">
+			<label for="d1">원할</label>
+			<input id="d2" class="only-sr" type="radio" name="temp4" value="2">
+			<label for="d2">지체</label>
+			<input id="d3" class="only-sr" type="radio" name="temp4" value="3">
+			<label for="d3">정체</label>
+			<input id="d4" class="only-sr" name="temp4" value="4">
+			<label for="d4"> ─ </label>
+			<input id="d5" class="only-sr" type="radio2" name="temp5" value="5">
+			<label for="d5">초기화</label>
+		</div>			
+	</div>
+	</div>
+	</ul>
+</div>
+<div id="div_option">
+도착 예정 시각</div>
+<div id="div_option_in">
+버스노선 : 13395 </div>
+<div id="div_option_in2">
+도착 예정 시간 :  </div>
+<div id="div_option_in3">
+6분 후 도착</div>
+<div id="div_bottom">Ciel</div>
+</div>
+
+
+</body>
+</html>
